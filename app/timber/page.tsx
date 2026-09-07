@@ -62,13 +62,13 @@ export default function Timber(){return <main>
   <section className="inner-hero shell timber-hero">
     <p className="eyebrow light">Our timber range</p>
     <h1>Timber for<br/><em>what you build next.</em></h1>
-    <p>New Zealand-grown timber for manufacturing, construction, landscaping and freight — sourced through established mill and manufacturing relationships.</p>
+    <p>New Zealand-grown timber for manufacturing, construction, landscaping and freight, sourced through established mill and manufacturing relationships.</p>
   </section>
 
   <section className="shell">
     <div className="range-lead">
       <div><p className="eyebrow">Our range</p><h2 className="display-serif">Four product groups.<br/>One clear path to stock.</h2></div>
-      <p>Use this site to understand what Sutcliffe Trading supplies. When you are ready to look at current products, stock and specifications, each category will take you directly into FPX.</p>
+      <p>Use this site to see what Sutcliffe Trading supplies. When you want current products, stock or specifications, the category links will take you through to FPX.</p>
     </div>
     <nav className="range-nav" aria-label="Product groups">
       {groups.map((group)=><a href={`#${group.id}`} key={group.id}><b>{group.title}</b><span>{group.number}</span></a>)}
@@ -90,7 +90,7 @@ export default function Timber(){return <main>
           <p className="band-label">{group.id === "manufacturing" ? "Grades we commonly supply" : "Product categories"}</p>
           <div className="category-list">{group.categories.map((item)=><span key={item}>{item}</span>)}</div>
           <div className="band-link">
-            <small>{group.id === "manufacturing" ? "Grades are shown here to communicate breadth; live specifications stay in FPX." : "Final category links will point directly to the matching FPX category."}</small>
+            <small>{group.id === "manufacturing" ? "These grades show the breadth of what we supply. Current specifications and availability sit in FPX." : "Final category links will point straight to the matching FPX category."}</small>
             <a className="button" href="https://app.fpx.nz/" target="_blank" rel="noreferrer">{group.linkLabel} ↗</a>
           </div>
         </div>
@@ -102,15 +102,15 @@ export default function Timber(){return <main>
     <div className="shell">
       <div className="application-head">
         <div><p className="eyebrow light">End uses / applications</p><h2>Know the job,<br/>not the product name?</h2></div>
-        <p>Applications stay separate from Product Categories. That gives customers another way into the range without muddying the actual product structure.</p>
+        <p>Some customers know the job first and the product second. These application groups give them another way to find the right part of the range.</p>
       </div>
       <div className="application-grid">{applications.map(([name,detail],index)=><article className="application-card" key={name}><span>{String(index+1).padStart(2,"0")}</span><h3>{name}</h3><p>{detail}</p></article>)}</div>
     </div>
   </section>
 
   <section className="shell fpx-bridge">
-    <div><p className="eyebrow">From overview to live stock</p><h2>This site explains the range.<br/>FPX carries the detail.</h2><p>Sutcliffe Trading shows customers what we can source and supply. FPX is where they can move into current products, stock, specifications and enquiries.</p></div>
-    <aside><p>Once the final category taxonomy is set in FPX, every relevant category on this page can link directly to its matching FPX view.</p><a className="button" href="https://app.fpx.nz/" target="_blank" rel="noreferrer">Explore FPX ↗</a></aside>
+    <div><p className="eyebrow">From range to stock</p><h2>See the range here.<br/>Check the detail in FPX.</h2><p>Sutcliffe Trading shows what we can source and supply. FPX is where you can check current products, stock, specifications and make an enquiry.</p></div>
+    <aside><p>Once the final FPX categories are set, each relevant category on this page can link directly to the right FPX view.</p><a className="button" href="https://app.fpx.nz/" target="_blank" rel="noreferrer">Explore FPX ↗</a></aside>
   </section>
 
   <section className="closing shell"><p className="eyebrow light">Need something specific?</p><h2>Tell us what<br/>you need.</h2><a className="button button-light" href="/contact">Start an enquiry</a><span className="closing-mark">Sutcliffe Trading</span></section>
