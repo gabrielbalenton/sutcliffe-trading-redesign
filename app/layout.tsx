@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import "./pages.css";
+import "./site-audit.css";
 
 export const metadata: Metadata = {
   title:"Sutcliffe Trading | New Zealand Timber Supplier Since 1988",
