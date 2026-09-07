@@ -1,10 +1,30 @@
 import Link from "next/link";
 
 const featured = [
-  {name:"Manufacturing Grades",image:"/category-manufacturing.png"}, {name:"Untreated Timber",image:"/category-untreated.png"},
-  {name:"Treated Timber",image:"/category-treated.png"}, {name:"Outdoor",image:"/category-outdoor.png"},
-  {name:"Retaining",image:"/category-retaining.png"}, {name:"Stress Graded Timber",image:"/category-stress.png"},
-  {name:"Decking",image:"/category-decking.png"},
+  {
+    name:"Manufacturing",
+    description:"Timber feedstock for wood processors and manufacturers.",
+    image:"/category-manufacturing.png",
+    href:"/timber#manufacturing"
+  },
+  {
+    name:"Building & Construction",
+    description:"Structural, building, finishing and specialist construction timber.",
+    image:"/category-stress.png",
+    href:"/timber#building"
+  },
+  {
+    name:"Outdoor & Landscaping",
+    description:"Treated and purpose-made timber for outdoor construction and landscaping.",
+    image:"/category-outdoor.png",
+    href:"/timber#outdoor"
+  },
+  {
+    name:"Dunnage",
+    description:"Timber for freight, shipping, load support and industrial transport.",
+    image:"/timber-packet.png",
+    href:"/timber#dunnage"
+  },
 ];
 const faqs = [
   ["What species do you trade?","We specialise in New Zealand-grown Radiata Pine across appearance, manufacturing, packaging, outdoor and structural grades."],
@@ -16,11 +36,11 @@ const faqs = [
 
 export default function Home() { return <main>
   <section className="hero hero-wide"><div className="hero-inner shell"><div className="hero-copy reveal"><p className="eyebrow light">New Zealand timber trading</p><h1>Timber trading.<br/><em>Since 1988.</em></h1><p className="hero-lede">New Zealand-grown Radiata Pine sourced through established mill and manufacturing relationships.</p><div className="actions"><Link className="button button-light" href="/timber">What we supply</Link><Link className="text-link light-link" href="/contact">Talk to us <span>↗</span></Link></div></div><div className="hero-index">EST. 1988 · NZ</div></div></section>
-  <div className="timber-ticker" aria-label="Timber supply capabilities"><div className="ticker-track"><span>Radiata Pine</span><i>•</i><span>Manufacturing Grades</span><i>•</i><span>Structural Timber</span><i>•</i><span>Outdoor & Landscaping</span><i>•</i><span>Custom Specifications</span><i>•</i><span>Nationwide Supply</span><i>•</i><span>Radiata Pine</span><i>•</i><span>Manufacturing Grades</span><i>•</i><span>Structural Timber</span><i>•</i><span>Outdoor & Landscaping</span><i>•</i><span>Custom Specifications</span><i>•</i><span>Nationwide Supply</span><i>•</i></div></div>
+  <div className="timber-ticker" aria-label="Timber supply capabilities"><div className="ticker-track"><span>Radiata Pine</span><i>•</i><span>Manufacturing</span><i>•</i><span>Building & Construction</span><i>•</i><span>Outdoor & Landscaping</span><i>•</i><span>Dunnage</span><i>•</i><span>Nationwide Supply</span><i>•</i><span>Radiata Pine</span><i>•</i><span>Manufacturing</span><i>•</i><span>Building & Construction</span><i>•</i><span>Outdoor & Landscaping</span><i>•</i><span>Dunnage</span><i>•</i><span>Nationwide Supply</span><i>•</i></div></div>
 
-  <section className="manifesto shell section-pad"><p className="eyebrow reveal">The merchant behind the order</p><div className="manifesto-grid"><h2 className="display-serif reveal">Nearly four decades<br/>of the same handshake.</h2><div className="prose reveal"><p>Sutcliffe Trading supplies New Zealand-grown Radiata Pine direct from leading sawmills and manufacturers.</p><p>From appearance-grade rough sawn lumber for remanufacturing through to stress-graded framing, outdoor and landscaping products, and custom specifications—we know the mills, the grades and what to avoid for a given requirement.</p><Link className="text-link" href="/about">Read our story <span>↗</span></Link></div></div></section>
+  <section className="manifesto shell section-pad"><p className="eyebrow reveal">The merchant behind the order</p><div className="manifesto-grid"><h2 className="display-serif reveal">Nearly four decades<br/>of the same handshake.</h2><div className="prose reveal"><p>Sutcliffe Trading supplies New Zealand-grown Radiata Pine direct from leading sawmills and manufacturers.</p><p>From manufacturing feedstock through to structural and construction timber, outdoor and landscaping products, dunnage and custom specifications—we know the mills, the grades and what to avoid for a given requirement.</p><Link className="text-link" href="/about">Read our story <span>↗</span></Link></div></div></section>
 
-  <section className="range section-pad"><div className="shell range-heading"><div><p className="eyebrow reveal">Current sourcing through FPX</p><h2 className="display-serif reveal">Timber by category.</h2></div><p className="range-note reveal">Browse a selection here, then move directly into current FPX stock and sourcing.</p></div><div className="category-rail">{featured.map((item,index)=><a className="category reveal" href="https://www.fpx.nz/" key={item.name} target="_blank" rel="noreferrer"><span className="category-no">{String(index+1).padStart(2,"0")}</span><div className="category-art" aria-hidden="true"><img src={item.image} alt=""/></div><h3>{item.name}</h3><span className="category-link">View available packets ↗</span></a>)}</div><div className="shell range-footer"><Link className="button button-dark" href="/timber">View all timber categories</Link><span className="drag-hint">← Drag to explore →</span></div></section>
+  <section className="range section-pad"><div className="shell range-heading"><div><p className="eyebrow reveal">Our timber range</p><h2 className="display-serif reveal">Four product groups.</h2></div><p className="range-note reveal">Start with the type of timber you need. Detailed products, stock and specifications will continue through FPX.</p></div><div className="category-rail">{featured.map((item,index)=><Link className="category reveal" href={item.href} key={item.name}><span className="category-no">{String(index+1).padStart(2,"0")}</span><div className="category-art" aria-hidden="true"><img src={item.image} alt=""/></div><h3>{item.name}</h3><p className="category-summary">{item.description}</p><span className="category-link">Explore product group →</span></Link>)}</div><div className="shell range-footer"><Link className="button button-dark" href="/timber">Explore our full range</Link><span className="drag-hint">← Drag to explore →</span></div></section>
 
   <section className="merchant-proof shell section-pad"><p className="eyebrow">Why buyers stay with Sutcliffe</p><div className="proof-grid"><div><span>01</span><h3>One team</h3><p>You deal with the same people from enquiry to delivery.</p></div><div><span>02</span><h3>Mill knowledge</h3><p>We know which mills cut which grades well—and which to avoid for a given specification.</p></div><div><span>03</span><h3>We carry the order</h3><p>Specification, scheduling, freight and follow-up sit with us, not with you.</p></div><div><span>04</span><h3>Repeat business</h3><p>Most of our volume goes to buyers we have supplied for years.</p></div></div></section>
 
