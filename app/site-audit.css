@@ -48,11 +48,16 @@ p{ text-wrap:pretty; }
   .band-info{padding:28px}
 }
 
+/* Closing CTA: keep it bold, but not so large that the line breaks become awkward. */
+.closing{min-height:520px;padding:clamp(48px,5vw,76px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.closing h2{font-size:clamp(64px,6.1vw,96px);line-height:.92;letter-spacing:-.045em;max-width:1120px;margin:30px 0 42px;text-wrap:balance}
+.closing .button{margin-top:0}
+.closing-mark{right:clamp(28px,4vw,54px);bottom:clamp(24px,3vw,42px)}
+
 /* General spacing polish. */
 .section-pad{padding-top:clamp(95px,8vw,125px);padding-bottom:clamp(95px,8vw,125px)}
 .inner-hero,.contact-hero{margin-top:0}
 .inner-hero h1,.contact-hero h1{max-width:980px}
-.closing h2{max-width:1180px;text-wrap:balance}
 .site-footer{column-gap:clamp(36px,5vw,70px)}
 
 /* Tablet: avoid squeezed two-column editorial layouts. */
@@ -62,6 +67,8 @@ p{ text-wrap:pretty; }
   .story-long aside,.approved-copy aside{position:static}
   .story-long aside h2,.approved-copy aside h2{max-width:760px}
   .range-nav{margin-bottom:90px}
+  .closing{min-height:460px;padding:48px}
+  .closing h2{font-size:clamp(58px,8vw,76px);max-width:860px;margin:26px 0 36px}
 }
 
 /* Mobile: keep headlines readable instead of oversized and broken into single words. */
@@ -80,8 +87,9 @@ p{ text-wrap:pretty; }
   .application-head h2{font-size:clamp(38px,10vw,48px)}
   .fpx-bridge{padding:64px 0 72px}
   .fpx-bridge h2{font-size:clamp(38px,10vw,48px)}
-  .closing{min-height:460px;padding:34px}
-  .closing h2{font-size:clamp(46px,13vw,62px);line-height:.9}
+  .closing{min-height:420px;padding:32px}
+  .closing h2{font-size:clamp(42px,12vw,58px);line-height:.94;letter-spacing:-.035em;margin:24px 0 30px}
+  .closing-mark{position:static;margin-top:28px}
   .category-summary{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 18px}
 }
 
