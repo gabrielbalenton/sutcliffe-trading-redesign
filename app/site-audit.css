@@ -1,4 +1,4 @@
-/* Sitewide visual QA pass — balance typography, remove awkward narrow columns, and tighten presentation layouts. */
+/* Sitewide visual QA pass. Balance typography, remove awkward narrow columns, and tighten presentation layouts. */
 
 h1,h2,h3,.display-serif{ text-wrap:balance; }
 p{ text-wrap:pretty; }
@@ -8,32 +8,25 @@ p{ text-wrap:pretty; }
   .range-lead{grid-template-columns:minmax(560px,.95fr) minmax(380px,1.05fr);gap:clamp(70px,8vw,130px);padding:86px 0 52px;align-items:end}
   .range-lead .display-serif{font-size:clamp(56px,4.6vw,76px);line-height:.98;max-width:760px}
   .range-lead p:last-child{max-width:650px}
-
   .application-head{grid-template-columns:minmax(470px,.9fr) minmax(420px,1.1fr);gap:clamp(70px,8vw,130px)}
   .application-head h2{font-size:clamp(46px,4vw,60px);max-width:560px}
-
   .story-long{grid-template-columns:minmax(430px,.9fr) minmax(0,1.1fr);gap:clamp(70px,8vw,130px)}
   .story-long aside h2{font-size:clamp(52px,4.5vw,70px);line-height:1;max-width:620px}
-
   .approved-copy{grid-template-columns:minmax(420px,.85fr) minmax(0,1.15fr);gap:clamp(70px,8vw,130px)}
   .approved-copy aside h2{font-size:clamp(50px,4.25vw,66px);line-height:1;max-width:620px}
-
   .contact-layout{grid-template-columns:minmax(430px,.85fr) minmax(0,1.15fr);gap:clamp(70px,8vw,130px)}
   .contact-layout .display-serif{font-size:clamp(54px,4.8vw,76px);max-width:650px}
-
   .manifesto-grid{grid-template-columns:minmax(560px,1fr) minmax(420px,.8fr);gap:clamp(70px,9vw,140px)}
   .manifesto-grid .display-serif{max-width:760px}
-
   .fpx-bridge{grid-template-columns:minmax(560px,1.15fr) minmax(360px,.85fr);gap:clamp(60px,7vw,110px)}
   .fpx-bridge h2{max-width:720px}
-
   .range-heading{gap:80px}
   .range-heading>div{max-width:760px}
   .range-heading .display-serif{max-width:760px}
   .range-note{width:auto;max-width:430px}
 }
 
-/* Homepage has exactly four product groups now: present them as a deliberate grid, not a leftover carousel. */
+/* Homepage has exactly four product groups now. Present them as a deliberate grid, not a leftover carousel. */
 @media (min-width:981px){
   .category-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:calc(100% - 48px);max-width:1500px;margin:72px auto 0;padding-left:0;overflow:visible;border-top:1px solid var(--line);border-right:1px solid var(--line)}
   .category{min-width:0;width:auto;height:520px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 26px 30px}
@@ -91,4 +84,4 @@ p{ text-wrap:pretty; }
   .category-summary{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 18px}
 }
 
-/* Audit pass complete. */
+/* Deployment retry after the QA file was added. */
