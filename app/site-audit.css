@@ -26,12 +26,13 @@ p{ text-wrap:pretty; }
   .range-note{width:auto;max-width:430px}
 }
 
-/* Homepage has exactly four product groups now. Present them as a deliberate grid, not a leftover carousel. */
+/* Homepage product groups: keep each image inside its own card and away from the category number. */
 @media (min-width:981px){
   .category-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:calc(100% - 48px);max-width:1500px;margin:72px auto 0;padding-left:0;overflow:visible;border-top:1px solid var(--line);border-right:1px solid var(--line)}
-  .category{min-width:0;width:auto;height:520px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 26px 30px}
-  .category-art{height:245px;margin:18px -55px 20px -28px}
-  .category-art img{width:410px}
+  .category{min-width:0;width:auto;height:520px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 26px 30px;overflow:hidden;position:relative}
+  .category-no{position:relative;z-index:2}
+  .category-art{height:245px;margin:18px 0 20px;overflow:hidden;position:relative;z-index:1}
+  .category-art img{width:100%;height:100%;display:block;object-fit:cover}
   .category h3{font-size:clamp(26px,2.1vw,34px);line-height:1.02;margin:auto 0 12px}
   .category-summary{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 20px;max-width:280px}
   .drag-hint{display:none}
@@ -83,5 +84,3 @@ p{ text-wrap:pretty; }
   .closing h2{font-size:clamp(46px,13vw,62px);line-height:.9}
   .category-summary{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 18px}
 }
-
-/* Deployment retry after the QA file was added. */
