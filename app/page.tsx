@@ -51,3 +51,5 @@ export default function Home() { return <main>
   <section className="faq shell section-pad"><div className="faq-heading reveal"><p className="eyebrow">FAQ</p><h2 className="display-serif">Common questions.</h2></div><div className="faq-list">{faqs.map(([question,answer],index)=><details className="reveal" key={question} open={index===0}><summary><span>{String(index+1).padStart(2,"0")}</span>{question}<b>＋</b></summary><p>{answer}</p></details>)}</div></section>
   <section className="closing shell"><p className="eyebrow light">Get in touch</p><h2>Tell us the specification.<br/>We&apos;ll tell you what&apos;s possible.</h2><Link className="button button-light" href="/contact">Start an enquiry</Link><span className="closing-mark">Direct to our team</span></section>
 </main> }
+
+// Visual QA pass is loaded globally from site-audit.css.
